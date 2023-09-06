@@ -77,19 +77,19 @@ const calResult = () =>{
 }
 const showResult = ()=>{
     if (instantScore==1){
-        vsDiv.innerText=`player choose:${userChoice} and computer choose:${compChoice}`
+        vsDiv.innerText=`You choose 👉${userChoice} and computer choose👉${compChoice}`
         scoreDiv.innerText=`Score : ${score}`
         resultDiv.innerText='you won'
         
     }else if (instantScore==0){
-        vsDiv.innerText=`player choose:${userChoice} and computer choose:${compChoice}`
+        vsDiv.innerText=`You choose 👉${userChoice} and computer choose👉${compChoice}`
         scoreDiv.innerText=`Score : ${score}`
-        resultDiv.innerText='Draw'
+        resultDiv.innerText='Draw handshake'
         
     }else if (instantScore==-1){
-        vsDiv.innerText=`player choose:${userChoice} and computer choose:${compChoice}`
+        vsDiv.innerText=`You choose 👉${userChoice} and computer choose👉${compChoice}`
         scoreDiv.innerText=`Score : ${score}`
-        resultDiv.innerText='you lose'
+        resultDiv.innerText='you lose 😓💔'
         
     }
 }

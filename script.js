@@ -17,32 +17,12 @@ const computerChoice = () => {
 
 }
 
-const playerChoice = () => {
+// const playerChoice = () => {
    
-    rockDiv.onclick = ()=>{
-        userChoice = rockDiv.getAttribute('id')
-        computerChoice()
-        console.log(compChoice)
-        calResult()
-    // console.log(userChoice)
-}
-    
-    paperDiv.onclick=()=>{
-        userChoice= paperDiv.getAttribute('id')
-        computerChoice()
-        calResult()
-    // console.log(userChoice)
-}
-    
-    scissorDiv.onclick=()=>{
-        userChoice= scissorDiv.getAttribute('id')
-        computerChoice()
-        calResult()
-    // console.log(userChoice)
-}
 
 
-}
+
+
 const calResult = () =>{
     //you win
     if (userChoice == 'rock' && compChoice== 'scissor'){
@@ -97,17 +77,17 @@ const calResult = () =>{
 }
 const showResult = ()=>{
     if (instantScore==1){
-        vsDiv.innerText=`player choose:${playerChoice} and computer choose:${compChoice}`
+        vsDiv.innerText=`player choose:${userChoice} and computer choose:${compChoice}`
         scoreDiv.innerText=`Score : ${score}`
         resultDiv.innerText='you won'
         
     }else if (instantScore==0){
-        vsDiv.innerText=`player choose:${playerChoice} and computer choose:${compChoice}`
+        vsDiv.innerText=`player choose:${userChoice} and computer choose:${compChoice}`
         scoreDiv.innerText=`Score : ${score}`
         resultDiv.innerText='Draw'
         
     }else if (instantScore==-1){
-        vsDiv.innerText=`player choose:${playerChoice} and computer choose:${compChoice}`
+        vsDiv.innerText=`player choose:${userChoice} and computer choose:${compChoice}`
         scoreDiv.innerText=`Score : ${score}`
         resultDiv.innerText='you lose'
         
@@ -115,8 +95,30 @@ const showResult = ()=>{
 }
 
 
+rockDiv.onclick = ()=>{
+    userChoice = rockDiv.getAttribute('id')
+    computerChoice()
+    console.log(compChoice)
+    calResult()
+}
+// console.log(userChoice)
 
-playerChoice()
+
+paperDiv.onclick=()=>{
+    userChoice= paperDiv.getAttribute('id')
+    computerChoice()
+    calResult()
+}
+// console.log(userChoice)
+
+
+scissorDiv.onclick=()=>{
+    userChoice= scissorDiv.getAttribute('id')
+    computerChoice()
+    calResult()
+// console.log(userChoice)
+}
+
 
 // console.log(userChoice)
 // calResult(compChoice,userChoice)

@@ -19,57 +19,62 @@ const computerChoice = () => {
 
 const playerChoice = () => {
    
-    rockDiv.onclick=()=>{
-        userChoice= rockDiv.getAttribute('id')
+    rockDiv.onclick = ()=>{
+        userChoice = rockDiv.getAttribute('id')
+        computerChoice()
+        console.log(compChoice)
+        calResult()
     // console.log(userChoice)
 }
     
     paperDiv.onclick=()=>{
         userChoice= paperDiv.getAttribute('id')
+        computerChoice()
+        calResult()
     // console.log(userChoice)
 }
     
     scissorDiv.onclick=()=>{
         userChoice= scissorDiv.getAttribute('id')
+        computerChoice()
+        calResult()
     // console.log(userChoice)
 }
 
 
 }
-const calResult = ()=>{
-    computerChoice()
-    playerChoice()
+const calResult = () =>{
     //you win
     if (userChoice == 'rock' && compChoice== 'scissor'){
         score++;
         instantScore=1;
-        showResult(compChoice,playerChoice,instantScore)
+        showResult()
 
     }else if(userChoice == 'scissor' && compChoice== 'paper'){
         score++
         instantScore=1;
-        showResult(compChoice,playerChoice,instantScore)
+        showResult()
 
     }else if(userChoice == 'paper' && compChoice== 'rock'){
         score++
         instantScore=1;
-        showResult(compChoice,playerChoice,instantScore)
+        showResult()
 
     }
     //draw
     else if(userChoice == 'rock' && compChoice== 'rock'){
         instantScore=0;
-        showResult(compChoice,playerChoice,instantScore)
+        showResult()
 
         
     }else if(userChoice == 'paper' && compChoice== 'paper'){
         instantScore=0;
-        showResult(compChoice,playerChoice,instantScore)
+        showResult()
 
         
     }else if(userChoice == 'scissor' && compChoice== 'scissor'){
         instantScore=0;
-        showResult(compChoice,playerChoice,instantScore)
+        showResult()
 
         
     }
@@ -77,20 +82,20 @@ const calResult = ()=>{
     else if (compChoice == 'rock' && userChoice== 'scissor'){
         score--;
         instantScore=-1;
-        showResult(compChoice,playerChoice,instantScore)
+        showResult()
 
     }else if(compChoice == 'scissor' && userChoice== 'paper'){
         score--
         instantScore=-1;
-        showResult(compChoice,playerChoice,instantScore)
+        showResult()
 
     }else if(compChoice == 'paper' && userChoice== 'rock'){
         score--
         instantScore=-1;
-        showResult(compChoice,playerChoice,instantScore)
+        showResult()
     }
 }
-const showResult=(compChoice,playerChoice,instantScore)=>{
+const showResult = ()=>{
     if (instantScore==1){
         vsDiv.innerText=`player choose:${playerChoice} and computer choose:${compChoice}`
         scoreDiv.innerText=`Score : ${score}`
@@ -111,7 +116,7 @@ const showResult=(compChoice,playerChoice,instantScore)=>{
 
 
 
-    
+playerChoice()
 
 // console.log(userChoice)
 // calResult(compChoice,userChoice)

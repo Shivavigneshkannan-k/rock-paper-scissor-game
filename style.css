@@ -1,40 +1,60 @@
 *{box-sizing: border-box;
     margin:0;
     padding: 0;}
-   .container{display: flex;
-            flex-direction: row;
-             justify-content: center;
-            align-items: center;}
-   
-   .options{display: flex;
-            flex-direction: row;
-           padding: 1em;
-           justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            max-width: fit-content;
-           border: 2px solid black;
-           border-radius: 10px;
-           margin: 1rem;
-           }
-   .options>*{flex-direction: column;
-             font-weight: bold;
-             font-size: 2em;}
-   
-   #rock{background-color: red;}
-   #paper{background-color: lightblue;}
-   #scissor{background-color: lightgreen;}
-   #reset{background: yellow;}
-   
-   
-   .reset{display: flex;
-            flex-direction: row;
-             justify-content: center;
-            align-items: center;}
-   .display{display: flex;
-            flex-direction: column;
-             justify-content: center;
-            align-items: center;
-           }
-   .display>*{font-size: 2rem;
-             font-weight: bold;}
+body{
+        background-color: #555;
+        color:whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border:2px white solid;
+        width: 100vw;
+        height: 100vh;
+}
+.container{display: flex;
+         flex-direction: row;
+          justify-content: center;
+         align-items: center;}
+
+.options{display: flex;
+         flex-direction: row;
+        padding: 1em;
+        justify-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+         max-width: fit-content;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin: 1rem;
+     background: lightblue;
+        }
+.options>*{flex-direction: column;
+          font-weight: bold;
+          font-size: 2em;}
+
+#rock{background-color: red;
+        color:#555;
+        font-size: 2rem; }
+#paper{background-color: lightblue;
+        color:#555;
+        font-size: 2rem; }
+#scissor{background-color: lightgreen;
+        color:#555;
+        font-size: 2rem; }
+#reset{background: yellow;
+        color:#555;
+        font-size: 2rem; }
+
+
+.reset{display: flex;
+         flex-direction: row;
+          justify-content: center;
+         align-items: center;}
+.display{display: flex;
+         flex-direction: column;
+          justify-content: center;
+         align-items: center;
+        }
+.display>*{font-size: 2rem;
+          font-weight: bold;}

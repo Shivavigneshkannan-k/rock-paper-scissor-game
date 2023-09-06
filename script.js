@@ -79,12 +79,12 @@ const showResult = ()=>{
     if (instantScore==1){
         vsDiv.innerText=`You choose 👉${userChoice} and computer choose👉${compChoice}`
         scoreDiv.innerText=`Score : ${score}`
-        resultDiv.innerText='you won'
+        resultDiv.innerText='you won 🏆'
         
     }else if (instantScore==0){
         vsDiv.innerText=`You choose 👉${userChoice} and computer choose👉${compChoice}`
         scoreDiv.innerText=`Score : ${score}`
-        resultDiv.innerText='Draw handshake'
+        resultDiv.innerText='Draw 🤝'
         
     }else if (instantScore==-1){
         vsDiv.innerText=`You choose 👉${userChoice} and computer choose👉${compChoice}`
@@ -117,6 +117,13 @@ scissorDiv.onclick=()=>{
     computerChoice()
     calResult()
 // console.log(userChoice)
+}
+resetDiv.onclick = ()=>{
+    score=0;
+    vsDiv.innerText=``
+    scoreDiv.innerText=`Score : ${score}`
+    resultDiv.innerText=''
+
 }
 
 
